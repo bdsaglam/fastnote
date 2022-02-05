@@ -1,3 +1,4 @@
+.PHONY: all test docs
 .ONESHELL:
 SHELL := /bin/bash
 SRC = $(wildcard nbs/*.ipynb)
