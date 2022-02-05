@@ -5,63 +5,59 @@
 # Instead edit ../../sidebar.json
 entries:
 - folders:
-  - output: web,pdf
-    title: fastnote
-    url: /
   - folderitems:
-    - output: web
-      subfolders:
-      - output: web,pdf
-        title: conda
-        url: conda.html
-      - output: web,pdf
-        title: docker
-        url: docker.html
-      - output: web,pdf
-        title: git
-        url: git.html
-      - output: web,pdf
-        title: java
-        url: java.html
-      - output: web,pdf
-        title: jupyter
-        url: jupyter.html
-      - output: web,pdf
-        title: latex
-        url: latex.html
-      - output: web,pdf
-        title: mac
-        url: mac.html
-      - output: web,pdf
-        title: miscellaneous
-        url: miscellaneous.html
-      - output: web,pdf
-        title: python
-        url: python.html
-      - output: web,pdf
-        title: pytorch
-        url: pytorch.html
-      - output: web,pdf
-        title: shell
-        url: shell.html
-      - output: web,pdf
-        title: ssh
-        url: ssh.html
-      - output: web,pdf
-        title: terminal
-        url: terminal.html
-      - output: web,pdf
-        title: tmux
-        url: tmux.html
-      - output: web,pdf
-        title: typescript
-        url: typescript.html
-      - output: web,pdf
-        title: vim
-        url: vim.html
-      - output: web,pdf
-        title: vscode
-        url: vscode.html
-      title: craft
+    - output: web,pdf
+      title: conda
+      url: conda.html
+    - output: web,pdf
+      title: docker
+      url: docker.html
+    - output: web,pdf
+      title: git
+      url: git.html
+    - output: web,pdf
+      title: java
+      url: java.html
+    - output: web,pdf
+      title: jupyter
+      url: jupyter.html
+    - output: web,pdf
+      title: latex
+      url: latex.html
+    - output: web,pdf
+      title: mac
+      url: mac.html
+    - output: web,pdf
+      title: miscellaneous
+      url: miscellaneous.html
+    - output: web,pdf
+      title: python
+      url: python.html
+    - output: web,pdf
+      title: pytorch
+      url: pytorch.html
+    - output: web,pdf
+      title: shell
+      url: shell.html
+    - output: web,pdf
+      title: ssh
+      url: ssh.html
+    - output: web,pdf
+      title: terminal
+      url: terminal.html
+    - output: web,pdf
+      title: tmux
+      url: tmux.html
+    - output: web,pdf
+      title: typescript
+      url: typescript.html
+    - output: web,pdf
+      title: vim
+      url: vim.html
+    - output: web,pdf
+      title: vscode
+      url: vscode.html
+    output: web
+    title: Craft
   output: web
   title: Sidebar
