@@ -432,6 +432,12 @@ nb_path: "nbs/craft/vim.ipynb"
 </li>
 </ul>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Plugins">Plugins<a class="anchor-link" href="#Plugins"> </a></h2><p>With the plugin manager, <a href="https://github.com/junegunn/vim-plug">vim-plug</a>, we can easily add a new plugin to <code>.vimrc</code>.</p>
 <p>Don't forget to reload <code>.vimrc</code> and <code>:PlugInstall</code> to install plugins.</p>
 <h3 id="vim-surround">vim-surround<a class="anchor-link" href="#vim-surround"> </a></h3><p><a href="https://github.com/tpope/vim-surround/blob/master/doc/surround.txt">Docs and examples</a></p>
@@ -444,28 +450,18 @@ nb_path: "nbs/craft/vim.ipynb"
 </li>
 <li><p>"hello" -&gt; ysWfprint<cr> -&gt; print("hello")</p>
 </li>
-<li><p>A custom surround command defined for markdown which surrounds visual selection with markdown code block of prompted language.</p>
+<li><p>A custom surround command is defined for markdown which surrounds visual selection with markdown code block of prompted language.</p>
 <div class="highlight"><pre><span></span><span class="k">let</span> <span class="k">b</span>:surround_99 <span class="p">=</span> <span class="s2">&quot;```\1lang: \1\r```&quot;</span>
 </pre></div>
 <ul>
-<li>pwd -&gt; <code>VScbash&lt;enter&gt;</code> -&gt; </li>
+<li><p>pwd -&gt; <code>VScbash&lt;enter&gt;</code> -&gt;</p>
+<p>```sh
+  pwd
+  ```</p>
+</li>
 </ul>
 </li>
 </ul>
-
-<pre><code>    \```sh
-
-
-
-    pwd
-
-
-
-    \```
-
-
-
-</code></pre>
 <h3 id="vim-commentary">vim-commentary<a class="anchor-link" href="#vim-commentary"> </a></h3><ul>
 <li><p><code>gc{motion}</code> to toggle comment out</p>
 </li>
@@ -571,6 +567,12 @@ nb_path: "nbs/craft/vim.ipynb"
 <li><p><code>&lt;C-d&gt;</code> to quit window</p>
 </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Best-practices">Best practices<a class="anchor-link" href="#Best-practices"> </a></h2><h4 id="Vim-Can-Save-You-Hours-Of-Work">Vim Can Save You Hours Of Work<a class="anchor-link" href="#Vim-Can-Save-You-Hours-Of-Work"> </a></h4><p><a href="https://www.youtube.com/watch?v=bshMXXX40_4">Video</a></p>
 <ul>
 <li><p><code>ddp</code> to swap lines</p>
