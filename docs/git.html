@@ -50,17 +50,9 @@ nb_path: "nbs/craft/git.ipynb"
 <pre><code>```sh
 
 # last commit
-
 git show
-
-
-
 # offset from last commit
-
 git show HEAD~2
-
-
-
 git show &lt;commit_hash&gt;
 
 ```
@@ -107,60 +99,33 @@ git show &lt;commit_hash&gt;
 <ul>
 <li><p>Pre-commit hook</p>
 <ul>
-<li>Save the following file as <code>.git/hooks/pre-commit</code> and make it executable.</li>
+<li><p>Save the following file as <code>.git/hooks/pre-commit</code> and make it executable.</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="k">if</span> git rev-parse --verify HEAD &gt;/dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="k">then</span>
+  <span class="nv">against</span><span class="o">=</span>HEAD
+<span class="k">else</span>
+  <span class="c1"># Initial commit: diff against an empty tree object</span>
+  <span class="nv">against</span><span class="o">=</span>&lt;CHANGE-HERE&gt;
+<span class="k">fi</span>
+<span class="c1"># The special marker tag to mark things which we still need to change</span>
+<span class="nv">marker</span><span class="o">=</span><span class="s2">&quot;#CRUMB#&quot;</span>
+<span class="c1"># Redirect output to stderr.</span>
+<span class="nb">exec</span> <span class="m">1</span>&gt;<span class="p">&amp;</span><span class="m">2</span>
+
+<span class="k">if</span> <span class="nb">test</span> <span class="k">$(</span>git diff --cached -z <span class="nv">$against</span> <span class="p">|</span> grep <span class="nv">$marker</span> <span class="p">|</span> wc -c<span class="k">)</span> !<span class="o">=</span> <span class="m">0</span> 
+<span class="k">then</span>
+  cat <span class="s">&lt;&lt;\EOF</span>
+<span class="s">  Error: Still has invalid debug markers in code:</span>
+<span class="s">  EOF</span>
+  <span class="nb">echo</span> <span class="sb">`</span>git diff --cached -z <span class="nv">$against</span> -G <span class="nv">$marker</span><span class="sb">`</span>
+  <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+</pre></div>
+</li>
 </ul>
 </li>
 </ul>
-
-<pre><code>```sh
-
-#!/bin/sh
-
-if git rev-parse --verify HEAD &gt;/dev/null 2&gt;&amp;1
-
-then
-
-    against=HEAD
-
-else
-
-    # Initial commit: diff against an empty tree object
-
-    against=&lt;CHANGE-HERE&gt;
-
-fi
-
-
-
-# The special marker tag to mark things which we still need to change
-
-marker="#CRUMB#"
-
-
-
-# Redirect output to stderr.
-
-exec 1&gt;&amp;2
-
-
-
-if test $(git diff --cached -z $against | grep $marker | wc -c) != 0 
-
-then
-
-    cat &lt;&lt;\EOF
-
-    Error: Still has invalid debug markers in code:
-
-EOF
-
-    echo `git diff --cached -z $against -G $marker`
-
-    exit 1
-
-fi
-
-```</code></pre>
 
 </div>
 </div>
