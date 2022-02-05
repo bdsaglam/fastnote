@@ -8,55 +8,55 @@ entries:
   - folderitems:
     - output: web,pdf
       title: conda
-      url: conda.html
+      url: craft.conda.html
     - output: web,pdf
       title: docker
-      url: docker.html
+      url: craft.docker.html
     - output: web,pdf
       title: git
-      url: git.html
+      url: craft.git.html
     - output: web,pdf
       title: java
-      url: java.html
+      url: craft.java.html
     - output: web,pdf
       title: jupyter
-      url: jupyter.html
+      url: craft.jupyter.html
     - output: web,pdf
       title: latex
-      url: latex.html
+      url: craft.latex.html
     - output: web,pdf
       title: mac
-      url: mac.html
+      url: craft.mac.html
     - output: web,pdf
       title: miscellaneous
-      url: miscellaneous.html
+      url: craft.miscellaneous.html
     - output: web,pdf
       title: python
-      url: python.html
+      url: craft.python.html
     - output: web,pdf
       title: pytorch
-      url: pytorch.html
+      url: craft.pytorch.html
     - output: web,pdf
       title: shell
-      url: shell.html
+      url: craft.shell.html
     - output: web,pdf
       title: ssh
-      url: ssh.html
+      url: craft.ssh.html
     - output: web,pdf
       title: terminal
-      url: terminal.html
+      url: craft.terminal.html
     - output: web,pdf
       title: tmux
-      url: tmux.html
+      url: craft.tmux.html
     - output: web,pdf
       title: typescript
-      url: typescript.html
+      url: craft.typescript.html
     - output: web,pdf
       title: vim
-      url: vim.html
+      url: craft.vim.html
     - output: web,pdf
       title: vscode
-      url: vscode.html
+      url: craft.vscode.html
     output: web
     title: Craft
   output: web

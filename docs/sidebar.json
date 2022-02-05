@@ -1,21 +1,21 @@
 {
   "Craft": {
-    "conda": "conda.html",
-    "docker": "docker.html",
-    "git": "git.html",
-    "java": "java.html",
-    "jupyter": "jupyter.html",
-    "latex": "latex.html",
-    "mac": "mac.html",
-    "miscellaneous": "miscellaneous.html",
-    "python": "python.html",
-    "pytorch": "pytorch.html",
-    "shell": "shell.html",
-    "ssh": "ssh.html",
-    "terminal": "terminal.html",
-    "tmux": "tmux.html",
-    "typescript": "typescript.html",
-    "vim": "vim.html",
-    "vscode": "vscode.html"
+    "conda": "craft.conda.html",
+    "docker": "craft.docker.html",
+    "git": "craft.git.html",
+    "java": "craft.java.html",
+    "jupyter": "craft.jupyter.html",
+    "latex": "craft.latex.html",
+    "mac": "craft.mac.html",
+    "miscellaneous": "craft.miscellaneous.html",
+    "python": "craft.python.html",
+    "pytorch": "craft.pytorch.html",
+    "shell": "craft.shell.html",
+    "ssh": "craft.ssh.html",
+    "terminal": "craft.terminal.html",
+    "tmux": "craft.tmux.html",
+    "typescript": "craft.typescript.html",
+    "vim": "craft.vim.html",
+    "vscode": "craft.vscode.html"
   }
 }
