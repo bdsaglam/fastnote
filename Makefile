@@ -1,4 +1,4 @@
-.PHONY: all test docs
+.PHONY: all fastnote test docs
 .ONESHELL:
 SHELL := /bin/bash
 SRC = $(wildcard nbs/*.ipynb)
