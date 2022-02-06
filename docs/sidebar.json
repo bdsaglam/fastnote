@@ -1,5 +1,6 @@
 {
   "Craft": {
+    "colab": "craft.colab.html",
     "conda": "craft.conda.html",
     "docker": "craft.docker.html",
     "git": "craft.git.html",
