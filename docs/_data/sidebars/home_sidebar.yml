@@ -62,5 +62,11 @@ entries:
       url: craft.vscode.html
     output: web
     title: Craft
+  - folderitems:
+    - output: web,pdf
+      title: evaluation
+      url: ml.evaluation.html
+    output: web
+    title: ML
   output: web
   title: Sidebar

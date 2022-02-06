@@ -18,5 +18,8 @@
     "typescript": "craft.typescript.html",
     "vim": "craft.vim.html",
     "vscode": "craft.vscode.html"
+  },
+  "ML": {
+    "evaluation": "ml.evaluation.html"
   }
 }
