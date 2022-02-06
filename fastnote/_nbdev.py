@@ -2,9 +2,9 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"find_binary_clf_threshold": "ml.evaluation.ipynb"}
 
-modules = []
+modules = ["ml/evaluation.py"]
 
 doc_url = "https://bdsaglam.github.io/fastnote/"
 
