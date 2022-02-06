@@ -1,0 +1,14 @@
+name: fastnote
+channels:
+- fastai
+- pytorch
+- defaults
+dependencies:
+- pip
+- numpy
+- pandas
+- matplotlib
+- jupyter
+- nbdev
+- fastcore
+- fastprogress
