@@ -114,7 +114,6 @@ ENV/
 # mypy
 .mypy_cache/
 
-.vscode
 *.swp
 
 # osx generated files
