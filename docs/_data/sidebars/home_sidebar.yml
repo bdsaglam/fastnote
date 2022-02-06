@@ -25,6 +25,9 @@ entries:
       title: jupyter
       url: craft.jupyter.html
     - output: web,pdf
+      title: kaggle
+      url: craft.kaggle.html
+    - output: web,pdf
       title: latex
       url: craft.latex.html
     - output: web,pdf
