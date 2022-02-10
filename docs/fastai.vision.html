@@ -47,26 +47,23 @@ nb_path: "nbs/fastai/fastai.vision.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Custom-model-with-cnn_learner">Custom model with <code>cnn_learner</code><a class="anchor-link" href="#Custom-model-with-cnn_learner"> </a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Find the index of pooling layer to determine <code>cut</code> value and then register the model.</p>
+<h3 id="Custom-model-with-cnn_learner">Custom model with <code>cnn_learner</code><a class="anchor-link" href="#Custom-model-with-cnn_learner"> </a></h3><p>Find the index of pooling layer to determine <code>cut</code> value and then register the model.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="n">imagenet_stats</span><span class="p">,</span> <span class="n">default_split</span>
 <span class="kn">from</span> <span class="nn">torchvision.models</span> <span class="kn">import</span> <span class="n">efficientnet_b0</span>
 
 <span class="c1"># register the model metadata</span>
 <span class="n">model_meta</span><span class="p">[</span><span class="n">efficientnet_b0</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cut&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;split&#39;</span><span class="p">:</span> <span class="n">default_split</span><span class="p">,</span> <span class="s1">&#39;stats&#39;</span><span class="p">:</span> <span class="n">imagenet_stats</span><span class="p">}</span>
+</pre></div>
 
-<span class="c1"># verify with Pets dataset</span>
-<span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">PETS</span><span class="p">)</span>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Toy-vision-dataloaders">Toy vision dataloaders<a class="anchor-link" href="#Toy-vision-dataloaders"> </a></h3><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">PETS</span><span class="p">)</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s2">&quot;images&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">label_func</span><span class="p">(</span><span class="n">f</span><span class="p">):</span> <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
 <span class="n">dls</span> <span class="o">=</span> <span class="n">ImageDataLoaders</span><span class="o">.</span><span class="n">from_name_func</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">label_func</span><span class="p">,</span> <span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">224</span><span class="p">))</span>
-<span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">arch</span><span class="o">=</span><span class="n">efficientnet_b0</span><span class="p">)</span>
-<span class="n">learn</span><span class="o">.</span><span class="n">model</span>
 </pre></div>
 
 </div>
