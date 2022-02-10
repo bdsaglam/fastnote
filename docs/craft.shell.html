@@ -31,223 +31,148 @@ nb_path: "nbs/craft/craft.shell.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Snippets">Snippets<a class="anchor-link" href="#Snippets"> </a></h2><ul>
-<li><p>To navigate to the previous directory (or back)</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> -
+<h2 id="Snippets">Snippets<a class="anchor-link" href="#Snippets"> </a></h2><h3 id="To-navigate-to-the-previous-directory-(or-back)">To navigate to the previous directory (or back)<a class="anchor-link" href="#To-navigate-to-the-previous-directory-(or-back)"> </a></h3><div class="highlight"><pre><span></span><span class="nb">cd</span> -
 </pre></div>
-</li>
-<li><p>Expanding commands</p>
-<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;There are </span><span class="k">$(</span>ls <span class="p">|</span> wc -w<span class="k">)</span><span class="s2"> files in this directory.&quot;</span>
+<h3 id="Expanding-commands">Expanding commands<a class="anchor-link" href="#Expanding-commands"> </a></h3><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;There are </span><span class="k">$(</span>ls <span class="p">|</span> wc -w<span class="k">)</span><span class="s2"> files in this directory.&quot;</span>
 </pre></div>
-</li>
-<li><p>Shell variables</p>
-<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$PATH</span>
+<h3 id="Shell-variables">Shell variables<a class="anchor-link" href="#Shell-variables"> </a></h3><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$PATH</span>
 </pre></div>
-</li>
-<li><p>Write to file</p>
-<div class="highlight"><pre><span></span>cat sometext &gt; newfile.txt
+<h3 id="Write-to-file">Write to file<a class="anchor-link" href="#Write-to-file"> </a></h3><div class="highlight"><pre><span></span>cat sometext &gt; newfile.txt
 </pre></div>
-</li>
-<li><p>Append to file</p>
-<div class="highlight"><pre><span></span>cat sometext &gt;&gt; existing_or_newfile.txt
+<h3 id="Append-to-file">Append to file<a class="anchor-link" href="#Append-to-file"> </a></h3><div class="highlight"><pre><span></span>cat sometext &gt;&gt; existing_or_newfile.txt
 </pre></div>
-</li>
-<li><p>Write command output to file and redirect errors to stdout</p>
-<div class="highlight"><pre><span></span>cmd &gt; file.txt <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<h3 id="Write-command-output-to-file-and-redirect-errors-to-stdout">Write command output to file and redirect errors to stdout<a class="anchor-link" href="#Write-command-output-to-file-and-redirect-errors-to-stdout"> </a></h3><div class="highlight"><pre><span></span>cmd &gt; file.txt <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 </pre></div>
-</li>
-<li><p>Find files by name</p>
-<div class="highlight"><pre><span></span>find /etc -name <span class="s1">&#39;*passwd*&#39;</span>
+<h3 id="Find-files-by-name">Find files by name<a class="anchor-link" href="#Find-files-by-name"> </a></h3><div class="highlight"><pre><span></span>find /etc name <span class="s1">&#39;*passwd*&#39;</span>
 </pre></div>
-</li>
-<li><p>Find files by name case insensitive</p>
-<div class="highlight"><pre><span></span>find /etc -iname <span class="s1">&#39;*passwd*&#39;</span>
+<h3 id="Find-files-by-name-case-insensitive">Find files by name case insensitive<a class="anchor-link" href="#Find-files-by-name-case-insensitive"> </a></h3><div class="highlight"><pre><span></span>find /etc -iname <span class="s1">&#39;*passwd*&#39;</span>
 </pre></div>
-</li>
-</ul>
-<ul>
-<li><p>Find files and execute</p>
-<div class="highlight"><pre><span></span>find /etc -iname iptables -exec <span class="nb">echo</span> <span class="s2">&quot;I found {}&quot;</span> <span class="se">\;</span>
+<h3 id="Find-files-and-execute">Find files and execute<a class="anchor-link" href="#Find-files-and-execute"> </a></h3><div class="highlight"><pre><span></span>find /etc -iname iptables -exec <span class="nb">echo</span> <span class="s2">&quot;I found {}&quot;</span> <span class="se">\;</span>
 </pre></div>
-</li>
-<li><p>Find and separate files with a 0 (NULL) byte so that names containing spaces or newlines can be interpreted correctly</p>
-<div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*gz&#39;</span> -print0
+<h3 id="Find-and-separate-files-with-a-0-(NULL)-byte-so-that-names-containing-spaces-or-newlines-can-be-interpreted-correctly">Find and separate files with a 0 (NULL) byte so that names containing spaces or newlines can be interpreted correctly<a class="anchor-link" href="#Find-and-separate-files-with-a-0-(NULL)-byte-so-that-names-containing-spaces-or-newlines-can-be-interpreted-correctly"> </a></h3><div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*gz&#39;</span> -print0
 </pre></div>
-</li>
-<li><p>grep case insensitive keyword in a file</p>
-<div class="highlight"><pre><span></span>grep -i keyword /path/to/file
+<h3 id="grep-case-insensitive-keyword-in-a-file">grep case insensitive keyword in a file<a class="anchor-link" href="#grep-case-insensitive-keyword-in-a-file"> </a></h3><div class="highlight"><pre><span></span>grep -i keyword /path/to/file
 </pre></div>
-</li>
-<li><p>grep recursively and list only files</p>
-<div class="highlight"><pre><span></span>grep -rl keyword /usr/share/doc/
+<h3 id="grep-recursively-and-list-only-files">grep recursively and list only files<a class="anchor-link" href="#grep-recursively-and-list-only-files"> </a></h3><div class="highlight"><pre><span></span>grep -rl keyword /usr/share/doc/
 </pre></div>
-</li>
-<li><p>grep on command output</p>
-<div class="highlight"><pre><span></span>ip addr show <span class="p">|</span> grep keyword
+<h3 id="grep-on-command-output">grep on command output<a class="anchor-link" href="#grep-on-command-output"> </a></h3><div class="highlight"><pre><span></span>ip addr show <span class="p">|</span> grep keyword
 </pre></div>
-</li>
-<li><p>list files matching regex pattern</p>
-<div class="highlight"><pre><span></span>ls <span class="o">[</span>agw<span class="o">]</span>*<span class="o">[</span>ne<span class="o">]</span>
+<h3 id="list-files-matching-regex-pattern">list files matching regex pattern<a class="anchor-link" href="#list-files-matching-regex-pattern"> </a></h3><div class="highlight"><pre><span></span>ls <span class="o">[</span>agw<span class="o">]</span>*<span class="o">[</span>ne<span class="o">]</span>
 </pre></div>
-</li>
-<li><p>xargs delete all zip files</p>
-<div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*gz&#39;</span> -print0 <span class="p">|</span> xargs -0 -I<span class="o">{}</span> rm <span class="o">{}</span>
+<h3 id="xargs-delete-all-zip-files">xargs delete all zip files<a class="anchor-link" href="#xargs-delete-all-zip-files"> </a></h3><div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*gz&#39;</span> -print0 <span class="p">|</span> xargs -0 -I<span class="o">{}</span> rm <span class="o">{}</span>
 </pre></div>
-</li>
-<li><p>xargs execute command on whole result</p>
-<div class="highlight"><pre><span></span>find . -name <span class="s1">&#39;*.txt&#39;</span> -print0 <span class="p">|</span> xargs -0
+<h3 id="xargs-execute-command-on-whole-result">xargs execute command on whole result<a class="anchor-link" href="#xargs-execute-command-on-whole-result"> </a></h3><div class="highlight"><pre><span></span>find . -name <span class="s1">&#39;*.txt&#39;</span> -print0 <span class="p">|</span> xargs -0
 </pre></div>
-</li>
-<li><p>xargs execute command per line</p>
-<div class="highlight"><pre><span></span>find . -name <span class="s1">&#39;*.txt&#39;</span> -print0 <span class="p">|</span> xargs -0 -n <span class="m">1</span>
+<h3 id="xargs-execute-command-per-line">xargs execute command per line<a class="anchor-link" href="#xargs-execute-command-per-line"> </a></h3><div class="highlight"><pre><span></span>find . -name <span class="s1">&#39;*.txt&#39;</span> -print0 <span class="p">|</span> xargs -0 -n <span class="m">1</span>
 </pre></div>
-<ul>
-<li><p>if there is no space or new line in file names, this works too:</p>
+<p>If there is no space or new line in file names, this works too:</p>
 <div class="highlight"><pre><span></span>ls -1 <span class="p">|</span> xargs -L1 wc -l
 find . -name <span class="s1">&#39;*.txt&#39;</span> <span class="p">|</span> xargs -L1 <span class="nb">echo</span> <span class="s1">&#39;Path: &#39;</span>
 </pre></div>
-</li>
-</ul>
-</li>
-<li><p>Move All files in a folder to another folder</p>
-<div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*&#39;</span> -print0 <span class="p">|</span> xargs -0 mv -t ..
+<h3 id="Move-All-files-in-a-folder-to-another-folder">Move All files in a folder to another folder<a class="anchor-link" href="#Move-All-files-in-a-folder-to-another-folder"> </a></h3><div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*&#39;</span> -print0 <span class="p">|</span> xargs -0 mv -t ..
 </pre></div>
-</li>
-<li><p>Concatenate string by xargs</p>
-<div class="highlight"><pre><span></span>cat file.txt <span class="p">|</span> tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -L1 -I<span class="o">{}</span> <span class="nb">echo</span> <span class="s1">&#39;prefix{}&#39;</span>
+<h3 id="Concatenate-string-by-xargs">Concatenate string by xargs<a class="anchor-link" href="#Concatenate-string-by-xargs"> </a></h3><div class="highlight"><pre><span></span>cat file.txt <span class="p">|</span> tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -L1 -I<span class="o">{}</span> <span class="nb">echo</span> <span class="s1">&#39;prefix{}&#39;</span>
 </pre></div>
-</li>
-<li><p>Compress</p>
-<div class="highlight"><pre><span></span>tar -cvf archive.tar directory_or_file
-  zip myzip file1 file2 file3<span class="sb">`</span>
+<h3 id="Compress">Compress<a class="anchor-link" href="#Compress"> </a></h3><div class="highlight"><pre><span></span>tar -cvf archive.tar directory_or_file
+zip myzip file1 file2 file3<span class="sb">`</span>
 </pre></div>
-</li>
-<li><p>Extract</p>
-<div class="highlight"><pre><span></span>tar -xvf archive.tar directory
-  unzip Myzip.zip
+<h3 id="Decompress-(extract)-a-zip-file">Decompress (extract) a zip file<a class="anchor-link" href="#Decompress-(extract)-a-zip-file"> </a></h3><div class="highlight"><pre><span></span>tar -xvf archive.tar directory
+unzip Myzip.zip
 </pre></div>
-</li>
-<li><p>Find command</p>
-<div class="highlight"><pre><span></span>which <span class="nb">command</span>
+<h3 id="Find-command">Find command<a class="anchor-link" href="#Find-command"> </a></h3><div class="highlight"><pre><span></span>which <span class="nb">command</span>
 </pre></div>
-</li>
-<li><p>Create alias</p>
-<div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">p</span><span class="o">=</span><span class="s1">&#39;pwd ; ls –CF&#39;</span>
+<h3 id="Create-alias">Create alias<a class="anchor-link" href="#Create-alias"> </a></h3><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">p</span><span class="o">=</span><span class="s1">&#39;pwd ; ls –CF&#39;</span>
 </pre></div>
-</li>
-<li><p>Make file executable</p>
-<div class="highlight"><pre><span></span>chmod <span class="m">700</span> file
+<h3 id="Make-file-executable">Make file executable<a class="anchor-link" href="#Make-file-executable"> </a></h3><div class="highlight"><pre><span></span>chmod <span class="m">700</span> file
 </pre></div>
-</li>
-<li><p>Create multiple numbered files</p>
-<div class="highlight"><pre><span></span>touch memo<span class="o">{</span><span class="m">1</span>,2,3,4,5<span class="o">}</span>
+<h3 id="Create-multiple-numbered-files">Create multiple numbered files<a class="anchor-link" href="#Create-multiple-numbered-files"> </a></h3><div class="highlight"><pre><span></span>touch memo<span class="o">{</span><span class="m">1</span>,2,3,4,5<span class="o">}</span>
 </pre></div>
-</li>
-<li><p>Kill port process</p>
-<div class="highlight"><pre><span></span>lsof -i :8000
-  <span class="nb">kill</span> -9 &lt;PID&gt;
+<h3 id="Kill-port-process">Kill port process<a class="anchor-link" href="#Kill-port-process"> </a></h3><div class="highlight"><pre><span></span>lsof -i :8000
+<span class="nb">kill</span> -9 &lt;PID&gt;
 </pre></div>
-</li>
-<li><p>Mount volume</p>
-<div class="highlight"><pre><span></span>sudo mount /dev/xvdf /data
+<h3 id="Mount-volume">Mount volume<a class="anchor-link" href="#Mount-volume"> </a></h3><div class="highlight"><pre><span></span>sudo mount /dev/xvdf /data
 </pre></div>
-</li>
-<li><p>Unmount volume</p>
-<div class="highlight"><pre><span></span>sudo umount /dev/xvdf
+<h3 id="Unmount-volume">Unmount volume<a class="anchor-link" href="#Unmount-volume"> </a></h3><div class="highlight"><pre><span></span>sudo umount /dev/xvdf
 </pre></div>
-</li>
-<li><p>Place a program in the background by putting an ampersand (&amp;) at the end</p>
-<div class="highlight"><pre><span></span>find /usr &gt; /tmp/allusrfiles <span class="p">&amp;</span>
+<h3 id="Place-a-program-in-the-background-by-putting-an-ampersand-(&amp;)-at-the-end">Place a program in the background by putting an ampersand (&amp;) at the end<a class="anchor-link" href="#Place-a-program-in-the-background-by-putting-an-ampersand-(&amp;)-at-the-end"> </a></h3><div class="highlight"><pre><span></span>find /usr &gt; /tmp/allusrfiles <span class="p">&amp;</span>
 </pre></div>
-</li>
-<li><p>Separate by a delimiter and get 6th field</p>
-<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$PATH</span> <span class="p">|</span> cut -d<span class="s1">&#39;:&#39;</span> -f6
+<h3 id="Separate-by-a-delimiter-and-get-6th-field">Separate by a delimiter and get 6th field<a class="anchor-link" href="#Separate-by-a-delimiter-and-get-6th-field"> </a></h3><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$PATH</span> <span class="p">|</span> cut -d<span class="s1">&#39;:&#39;</span> -f6
 </pre></div>
-</li>
-<li><p>Replace spaces in filenames with underscores</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> file <span class="k">in</span> * <span class="p">;</span> <span class="k">do</span>
-      <span class="nv">f</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span> tr <span class="o">[</span>:blank:<span class="o">]</span> <span class="o">[</span>_<span class="o">]</span><span class="sb">`</span>
-      <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> mv -i -- <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span>
-  <span class="k">done</span>
+<h3 id="Replace-spaces-in-filenames-with-underscores">Replace spaces in filenames with underscores<a class="anchor-link" href="#Replace-spaces-in-filenames-with-underscores"> </a></h3><div class="highlight"><pre><span></span><span class="k">for</span> file <span class="k">in</span> * <span class="p">;</span> <span class="k">do</span>
+    <span class="nv">f</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$file</span> <span class="p">|</span> tr <span class="o">[</span>:blank:<span class="o">]</span> <span class="o">[</span>_<span class="o">]</span><span class="sb">`</span>
+    <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> mv -i -- <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span>
+<span class="k">done</span>
 </pre></div>
-</li>
-<li><p>Send process background</p>
+<h3 id="Send-process-background">Send process background<a class="anchor-link" href="#Send-process-background"> </a></h3>
+<pre><code>&lt;Ctrl + z&gt;
+bg
+disown %1</code></pre>
+<h3 id="Parse-json-and-get-value">Parse json and get value<a class="anchor-link" href="#Parse-json-and-get-value"> </a></h3><div class="highlight"><pre><span></span><span class="k">function</span> jsonValue <span class="o">{</span>
+    <span class="nv">KEY</span><span class="o">=</span><span class="nv">$1</span>
+    <span class="nv">num</span><span class="o">=</span><span class="nv">$2</span>
+    awk -F<span class="s2">&quot;[,:}]&quot;</span> <span class="s1">&#39;{for(i=1;i&lt;=NF;i++){if($i~/&#39;</span><span class="nv">$KEY</span><span class="s1">&#39;\042/){print $(i+1)}}}&#39;</span> <span class="p">|</span> tr -d <span class="s1">&#39;&quot;&#39;</span> <span class="p">|</span> sed -n <span class="si">${</span><span class="nv">num</span><span class="si">}</span>p
+<span class="o">}</span>
+curl -s -X GET http://twitter.com/users/show/<span class="nv">$1</span>.json <span class="p">|</span> jsonValue profile_image_url <span class="m">1</span>
+</pre></div>
+<h3 id="Pass-string-when-file-expected">Pass string when file expected<a class="anchor-link" href="#Pass-string-when-file-expected"> </a></h3><div class="highlight"><pre><span></span><span class="c1"># &lt;(CMD)</span>
+diff &lt;<span class="o">(</span>ls foo<span class="o">)</span> &lt;<span class="o">(</span>ls bar<span class="o">)</span>
+</pre></div>
+<h3 id="Show-date-as-UTC-timestamp">Show date as UTC timestamp<a class="anchor-link" href="#Show-date-as-UTC-timestamp"> </a></h3><div class="highlight"><pre><span></span>date +%s
+</pre></div>
+<h3 id="Add-a-prefix-to-every-file-in-the-directory">Add a prefix to every file in the directory<a class="anchor-link" href="#Add-a-prefix-to-every-file-in-the-directory"> </a></h3><div class="highlight"><pre><span></span><span class="k">for</span> f <span class="k">in</span> * <span class="p">;</span> <span class="k">do</span> mv -- <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span> <span class="s2">&quot;2022-02-04-</span><span class="nv">$f</span><span class="s2">&quot;</span> <span class="p">;</span> <span class="k">done</span>
 
-<pre><code>
-  &lt;Ctrl + z&gt;
-  bg
-  disown %1</code></pre>
-</li>
-<li><p>Parse json and get value</p>
-<div class="highlight"><pre><span></span><span class="k">function</span> jsonValue <span class="o">{</span>
-      <span class="nv">KEY</span><span class="o">=</span><span class="nv">$1</span>
-      <span class="nv">num</span><span class="o">=</span><span class="nv">$2</span>
-      awk -F<span class="s2">&quot;[,:}]&quot;</span> <span class="s1">&#39;{for(i=1;i&lt;=NF;i++){if($i~/&#39;</span><span class="nv">$KEY</span><span class="s1">&#39;\042/){print $(i+1)}}}&#39;</span> <span class="p">|</span> tr -d <span class="s1">&#39;&quot;&#39;</span> <span class="p">|</span> sed -n <span class="si">${</span><span class="nv">num</span><span class="si">}</span>p
-  <span class="o">}</span>
-  curl -s -X GET http://twitter.com/users/show/<span class="nv">$1</span>.json <span class="p">|</span> jsonValue profile_image_url <span class="m">1</span>
+<span class="c1"># or</span>
+<span class="k">for</span> f <span class="k">in</span> <span class="k">$(</span>find . -maxdepth <span class="m">1</span> -type f  -name <span class="s1">&#39;*.json&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>  
+mv -v <span class="nv">$f</span> <span class="si">${</span><span class="nv">f</span><span class="p">%/*</span><span class="si">}</span>/<span class="k">$(</span>date +%Y-%m-%d<span class="k">)</span>_prefix_<span class="si">${</span><span class="nv">f</span><span class="p">##*/</span><span class="si">}</span>
+<span class="k">done</span>
 </pre></div>
-</li>
-<li><p>Pass string when file expected</p>
-<div class="highlight"><pre><span></span><span class="c1"># &lt;(CMD)</span>
-  diff &lt;<span class="o">(</span>ls foo<span class="o">)</span> &lt;<span class="o">(</span>ls bar<span class="o">)</span>
+<h3 id="Format-date-to-ISO-format">Format date to ISO format<a class="anchor-link" href="#Format-date-to-ISO-format"> </a></h3><div class="highlight"><pre><span></span>date +%Y-%m-%d-T%H:%M:%S%z
 </pre></div>
-</li>
-<li><p>Show date as UTC timestamp</p>
-<div class="highlight"><pre><span></span>date +%s
+<h3 id="Export-environment-variables-from-.env-file">Export environment variables from .env file<a class="anchor-link" href="#Export-environment-variables-from-.env-file"> </a></h3><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="k">$(</span><span class="nb">echo</span> <span class="k">$(</span>cat .env <span class="p">|</span> sed <span class="s1">&#39;s/#.*//g&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/\r//g&#39;</span> <span class="p">|</span> xargs<span class="k">)</span> <span class="p">|</span> envsubst<span class="k">)</span>
 </pre></div>
-</li>
-<li><p>Add a prefix to every file in the directory</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> f <span class="k">in</span> * <span class="p">;</span> <span class="k">do</span> mv -- <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span> <span class="s2">&quot;2022-02-04-</span><span class="nv">$f</span><span class="s2">&quot;</span> <span class="p">;</span> <span class="k">done</span>
+<p><a href="https://gist.github.com/mihow/9c7f559807069a03e302605691f85572?permalink_comment_id=3700180#gistcomment-3700180">reference</a></p>
 
-  <span class="c1"># or</span>
-  <span class="k">for</span> f <span class="k">in</span> <span class="k">$(</span>find . -maxdepth <span class="m">1</span> -type f  -name <span class="s1">&#39;*.json&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>  
-  mv -v <span class="nv">$f</span> <span class="si">${</span><span class="nv">f</span><span class="p">%/*</span><span class="si">}</span>/<span class="k">$(</span>date +%Y-%m-%d<span class="k">)</span>_prefix_<span class="si">${</span><span class="nv">f</span><span class="p">##*/</span><span class="si">}</span>
-  <span class="k">done</span>
-</pre></div>
-</li>
-<li><p>Format date to ISO format</p>
-<div class="highlight"><pre><span></span>date +%Y-%m-%d-T%H:%M:%S%z
-</pre></div>
-</li>
-<li><p>Command line arguments with varargs and flags</p>
-<div class="highlight"><pre><span></span><span class="c1"># usage</span>
-  <span class="c1"># cli.sh -l Newton EINSTEIN HawKING</span>
-  <span class="c1"># output: newtonn einstein hawking</span>
-  <span class="nv">lower</span><span class="o">=</span><span class="m">1</span>
-  <span class="k">while</span> <span class="nb">getopts</span> <span class="s2">&quot;:l:u:&quot;</span> flag
-  <span class="k">do</span>
-      <span class="k">case</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">flag</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">in</span>
-          l<span class="o">)</span> 
-          <span class="nv">lower</span><span class="o">=</span><span class="m">1</span>
-          <span class="nv">OPTIND</span><span class="o">=</span><span class="nv">$OPTIND</span>-1
-          <span class="p">;;</span>
-          u<span class="o">)</span> <span class="nv">lower</span><span class="o">=</span><span class="m">0</span>
-          <span class="nv">OPTIND</span><span class="o">=</span><span class="nv">$OPTIND</span>-1
-          <span class="p">;;</span>
-          <span class="se">\?</span><span class="o">)</span>
-          <span class="nb">echo</span> <span class="s2">&quot;Invalid option: -</span><span class="nv">$OPTARG</span><span class="s2">&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
-          <span class="nb">exit</span> <span class="m">1</span>
-          <span class="p">;;</span>
-          :<span class="o">)</span>
-          <span class="nb">echo</span> <span class="s2">&quot;Option -</span><span class="nv">$OPTARG</span><span class="s2"> requires an argument.&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
-          <span class="nb">exit</span> <span class="m">1</span>
-          <span class="p">;;</span>
-      <span class="k">esac</span>
-  <span class="k">done</span>
-  <span class="nb">shift</span> <span class="k">$((</span>OPTIND <span class="o">-</span><span class="m">1</span><span class="k">))</span>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Command-line-arguments-with-varargs-and-flags">Command line arguments with varargs and flags<a class="anchor-link" href="#Command-line-arguments-with-varargs-and-flags"> </a></h3><div class="highlight"><pre><span></span><span class="c1"># usage</span>
+<span class="c1"># cli.sh -l Newton EINSTEIN HawKING</span>
+<span class="c1"># output: newtonn einstein hawking</span>
+<span class="nv">lower</span><span class="o">=</span><span class="m">1</span>
+<span class="k">while</span> <span class="nb">getopts</span> <span class="s2">&quot;:l:u:&quot;</span> flag
+<span class="k">do</span>
+    <span class="k">case</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">flag</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">in</span>
+        l<span class="o">)</span> 
+        <span class="nv">lower</span><span class="o">=</span><span class="m">1</span>
+        <span class="nv">OPTIND</span><span class="o">=</span><span class="nv">$OPTIND</span>-1
+        <span class="p">;;</span>
+        u<span class="o">)</span> <span class="nv">lower</span><span class="o">=</span><span class="m">0</span>
+        <span class="nv">OPTIND</span><span class="o">=</span><span class="nv">$OPTIND</span>-1
+        <span class="p">;;</span>
+        <span class="se">\?</span><span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Invalid option: -</span><span class="nv">$OPTARG</span><span class="s2">&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+        <span class="nb">exit</span> <span class="m">1</span>
+        <span class="p">;;</span>
+        :<span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Option -</span><span class="nv">$OPTARG</span><span class="s2"> requires an argument.&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+        <span class="nb">exit</span> <span class="m">1</span>
+        <span class="p">;;</span>
+    <span class="k">esac</span>
+<span class="k">done</span>
+<span class="nb">shift</span> <span class="k">$((</span>OPTIND <span class="o">-</span><span class="m">1</span><span class="k">))</span>
 
-  <span class="k">for</span> word <span class="k">in</span> <span class="nv">$@</span>
-  <span class="k">do</span>
-  <span class="k">if</span> <span class="o">[[</span> <span class="nv">$lower</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-      <span class="nb">echo</span> -n <span class="nv">$word</span> <span class="s1">&#39; &#39;</span><span class="p">|</span> tr <span class="s1">&#39;[:upper:]&#39;</span> <span class="s1">&#39;[:lower:]&#39;</span>
-  <span class="k">else</span>
-      <span class="nb">echo</span> -n <span class="nv">$word</span> <span class="s1">&#39; &#39;</span><span class="p">|</span> tr <span class="s1">&#39;[:lower:]&#39;</span> <span class="s1">&#39;[:upper:]&#39;</span>
-  <span class="k">fi</span>
-  <span class="k">done</span>
-  <span class="nb">echo</span>
+<span class="k">for</span> word <span class="k">in</span> <span class="nv">$@</span>
+<span class="k">do</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$lower</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> -n <span class="nv">$word</span> <span class="s1">&#39; &#39;</span><span class="p">|</span> tr <span class="s1">&#39;[:upper:]&#39;</span> <span class="s1">&#39;[:lower:]&#39;</span>
+<span class="k">else</span>
+    <span class="nb">echo</span> -n <span class="nv">$word</span> <span class="s1">&#39; &#39;</span><span class="p">|</span> tr <span class="s1">&#39;[:lower:]&#39;</span> <span class="s1">&#39;[:upper:]&#39;</span>
+<span class="k">fi</span>
+<span class="k">done</span>
+<span class="nb">echo</span>
 </pre></div>
-</li>
-</ul>
 
 </div>
 </div>
