@@ -21,6 +21,9 @@
     "vscode": "craft.vscode.html"
   },
   "ML": {
-    "evaluation": "ml.evaluation.html"
+    "evaluation": "ml.evaluation.html",
+    "fastai": {
+      "vision": "fastai.vision.html"
+    }
   }
 }

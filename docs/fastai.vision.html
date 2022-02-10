@@ -57,7 +57,7 @@ nb_path: "nbs/fastai/fastai.vision.ipynb"
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="n">imagenet_stats</span><span class="p">,</span> <span class="n">default_split</span>
 <span class="kn">from</span> <span class="nn">torchvision.models</span> <span class="kn">import</span> <span class="n">efficientnet_b0</span>
 
-<span class="c1"># register the model meta data</span>
+<span class="c1"># register the model metadata</span>
 <span class="n">model_meta</span><span class="p">[</span><span class="n">efficientnet_b0</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cut&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;split&#39;</span><span class="p">:</span> <span class="n">default_split</span><span class="p">,</span> <span class="s1">&#39;stats&#39;</span><span class="p">:</span> <span class="n">imagenet_stats</span><span class="p">}</span>
 
 <span class="c1"># verify with Pets dataset</span>

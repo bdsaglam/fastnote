@@ -69,6 +69,12 @@ entries:
     - output: web,pdf
       title: evaluation
       url: ml.evaluation.html
+    - output: web
+      subfolders:
+      - output: web,pdf
+        title: vision
+        url: fastai.vision.html
+      title: fastai
     output: web
     title: ML
   output: web
