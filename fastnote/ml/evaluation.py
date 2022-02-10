@@ -6,6 +6,7 @@ __all__ = ['find_binary_clf_threshold']
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Cell
 def find_binary_clf_threshold(targets, preds, metrics, *, threshold_range=np.arange(0, 1, 0.05), weight=None, metric_names=None, show=True):
     """Find the best threshold for binary classification given targets and predicted probabilities"""
     if weight is None:
