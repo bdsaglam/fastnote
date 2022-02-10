@@ -13,3 +13,4 @@ dependencies:
 - fastcore
 - fastprogress
 - scikit-learn
+- fastai
