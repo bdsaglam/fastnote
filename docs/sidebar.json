@@ -1,29 +1,32 @@
 {
   "Craft": {
-    "colab": "craft.colab.html",
-    "conda": "craft.conda.html",
-    "docker": "craft.docker.html",
-    "git": "craft.git.html",
-    "java": "craft.java.html",
-    "jupyter": "craft.jupyter.html",
-    "kaggle": "craft.kaggle.html",
-    "latex": "craft.latex.html",
-    "mac": "craft.mac.html",
-    "miscellaneous": "craft.miscellaneous.html",
-    "python": "craft.python.html",
-    "pytorch": "craft.pytorch.html",
-    "shell": "craft.shell.html",
-    "ssh": "craft.ssh.html",
-    "terminal": "craft.terminal.html",
-    "tmux": "craft.tmux.html",
-    "typescript": "craft.typescript.html",
-    "vim": "craft.vim.html",
-    "vscode": "craft.vscode.html"
+    "colab": "/craft.colab",
+    "conda": "/craft.conda",
+    "docker": "/craft.docker",
+    "git": "/craft.git",
+    "java": "/craft.java",
+    "jupyter": "/craft.jupyter",
+    "kaggle": "/craft.kaggle",
+    "k8s": "/craft.kubernetes",
+    "latex": "/craft.latex",
+    "mac": "/craft.mac",
+    "miscellaneous": "/craft.miscellaneous",
+    "python": "/craft.python",
+    "pytorch": "/craft.pytorch",
+    "shell": "/craft.shell",
+    "ssh": "/craft.ssh",
+    "terminal": "/craft.terminal",
+    "tmux": "/craft.tmux",
+    "typescript": "/craft.typescript",
+    "vim": "/craft.vim",
+    "vscode": "/craft.vscode"
   },
   "ML": {
-    "evaluation": "ml.evaluation.html",
-    "fastai": {
-      "vision": "fastai.vision.html"
+    "evaluation": "/ml.evaluation",
+    "": {
+      "fastai": {
+        "vision": "/fastai.vision"
+      }
     }
   }
 }

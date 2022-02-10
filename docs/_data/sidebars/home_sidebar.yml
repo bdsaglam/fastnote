@@ -8,73 +8,77 @@ entries:
   - folderitems:
     - output: web,pdf
       title: colab
-      url: craft.colab.html
+      url: /craft.colab
     - output: web,pdf
       title: conda
-      url: craft.conda.html
+      url: /craft.conda
     - output: web,pdf
       title: docker
-      url: craft.docker.html
+      url: /craft.docker
     - output: web,pdf
       title: git
-      url: craft.git.html
+      url: /craft.git
     - output: web,pdf
       title: java
-      url: craft.java.html
+      url: /craft.java
     - output: web,pdf
       title: jupyter
-      url: craft.jupyter.html
+      url: /craft.jupyter
     - output: web,pdf
       title: kaggle
-      url: craft.kaggle.html
+      url: /craft.kaggle
+    - output: web,pdf
+      title: k8s
+      url: /craft.kubernetes
     - output: web,pdf
       title: latex
-      url: craft.latex.html
+      url: /craft.latex
     - output: web,pdf
       title: mac
-      url: craft.mac.html
+      url: /craft.mac
     - output: web,pdf
       title: miscellaneous
-      url: craft.miscellaneous.html
+      url: /craft.miscellaneous
     - output: web,pdf
       title: python
-      url: craft.python.html
+      url: /craft.python
     - output: web,pdf
       title: pytorch
-      url: craft.pytorch.html
+      url: /craft.pytorch
     - output: web,pdf
       title: shell
-      url: craft.shell.html
+      url: /craft.shell
     - output: web,pdf
       title: ssh
-      url: craft.ssh.html
+      url: /craft.ssh
     - output: web,pdf
       title: terminal
-      url: craft.terminal.html
+      url: /craft.terminal
     - output: web,pdf
       title: tmux
-      url: craft.tmux.html
+      url: /craft.tmux
     - output: web,pdf
       title: typescript
-      url: craft.typescript.html
+      url: /craft.typescript
     - output: web,pdf
       title: vim
-      url: craft.vim.html
+      url: /craft.vim
     - output: web,pdf
       title: vscode
-      url: craft.vscode.html
+      url: /craft.vscode
     output: web
     title: Craft
   - folderitems:
     - output: web,pdf
       title: evaluation
-      url: ml.evaluation.html
-    - output: web
+      url: /ml.evaluation
       subfolders:
-      - output: web,pdf
-        title: vision
-        url: fastai.vision.html
-      title: fastai
+      - output: web
+        subfolderitems:
+        - output: web,pdf
+          title: vision
+          url: /fastai.vision
+        title: fastai
     output: web
     title: ML
   output: web

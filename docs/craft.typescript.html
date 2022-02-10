@@ -1,6 +1,6 @@
 ---
 
-title: typescript
+title: TypeScript
 
 
 keywords: fastai
@@ -31,101 +31,50 @@ nb_path: "nbs/craft/craft.typescript.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><p>Extend a constrained genaric type</p>
-<p>```ts</p>
-</li>
-</ul>
+<h2 id="Snippets">Snippets<a class="anchor-link" href="#Snippets"> </a></h2><h3 id="Extend-a-constrained-generic-type">Extend a constrained generic type<a class="anchor-link" href="#Extend-a-constrained-generic-type"> </a></h3><div class="highlight"><pre><span></span><span class="kr">declare</span> <span class="nb">global</span> <span class="p">{</span>
+    <span class="kd">interface</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">T</span> <span class="k">extends</span> <span class="kt">number</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="nx">sq</span><span class="p">()</span><span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-<pre><code>declare global {
+<span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sq</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span> <span class="p">=&gt;</span> <span class="nx">n</span><span class="o">*</span><span class="nx">n</span><span class="p">);</span>
+<span class="p">}</span>
 
-    interface Array&lt;T extends number&gt; {
+<span class="kd">let</span> <span class="nx">array</span>:<span class="kt">Array</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">sq</span><span class="p">());</span>
+</pre></div>
 
-        sq(): Array&lt;T&gt;;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Concepts">Concepts<a class="anchor-link" href="#Concepts"> </a></h2><h3 id="Arrow-function-vs-function-expression">Arrow function vs function expression<a class="anchor-link" href="#Arrow-function-vs-function-expression"> </a></h3><p><a href="https://stackoverflow.com/a/34361380/6641096">Stackoverflow post</a></p>
+<p>Arrow functions don't have their own this or arguments binding. Instead, those identifiers are resolved in the lexical scope like any other variable. That means that inside an arrow function, this and arguments refer to the values of this and arguments in the environment the arrow function is defined in (i.e. "outside" the arrow function):</p>
+<p>In the function expression case, this refers to the object that was created inside the createObject. In the arrow function case, this refers to this of createObject itself.</p>
+<div class="highlight"><pre><span></span><span class="c1">// we want to bind to this when adding new method to a type</span>
+<span class="c1">// hence, using function expression</span>
+<span class="kt">number</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">even</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-    }
+<span class="c1">// function exp. vs arrow exp.</span>
 
-}
+<span class="kd">function</span> <span class="nx">makeAdder</span><span class="p">(</span><span class="nx">offset</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">value</span>: <span class="kt">offset</span><span class="p">,</span>
+        <span class="nx">add_func</span>: <span class="kt">function</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="nx">n</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="nx">add_arrow</span><span class="o">:</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="nx">n</span> <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-
-
-Array.prototype.sq = function () {
-
-return this.map(n =&gt; n*n);
-
-}
-
-
-
-let array:Array&lt;number&gt; = [1,2,3];
-
-console.log(array.sq());
-
-
-
-```
-
-
-
-</code></pre>
-<ul>
-<li>Arrow function vs function expression</li>
-</ul>
-
-<pre><code>(stackoverflow)[https://stackoverflow.com/a/34361380/6641096]
-
-
-
-Arrow functions don't have their own this or arguments binding. Instead, those identifiers are resolved in the lexical scope like any other variable. That means that inside an arrow function, this and arguments refer to the values of this and arguments in the environment the arrow function is defined in (i.e. "outside" the arrow function):
-
-
-In the function expression case, this refers to the object that was created inside the createObject. In the arrow function case, this refers to this of createObject itself.
-
-
-
-```ts
-
-// we want to bind to this when adding new method to a type
-
-// hence, using function expression
-
-number.prototype.even = function () {
-
-    return this % 2 == 0;
-
-}
-
-
-
-// function exp. vs arrow exp.
-
-function makeAdder(offset) {
-
-    return {
-
-        value: offset,
-
-        add_func: function (n) {
-
-            return this.value + n;
-
-        },
-
-        add_arrow: (n) =&gt; { this.value + n },
-
-    }
-
-}
-
-
-
-const adder = makeAdder(10);
-
-console.log(adder.add_func(4)); // 14
-
-console.log(adder.add_arrow(4)); // undefined
-
-```</code></pre>
+<span class="kd">const</span> <span class="nx">adder</span> <span class="o">=</span> <span class="nx">makeAdder</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">adder</span><span class="p">.</span><span class="nx">add_func</span><span class="p">(</span><span class="mf">4</span><span class="p">));</span> <span class="c1">// 14</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">adder</span><span class="p">.</span><span class="nx">add_arrow</span><span class="p">(</span><span class="mf">4</span><span class="p">));</span> <span class="c1">// undefined</span>
+</pre></div>
 
 </div>
 </div>

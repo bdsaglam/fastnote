@@ -4,13 +4,15 @@ __all__ = ['find_binary_clf_threshold']
 
 # Cell
 import numpy as np
-import matplotlib.pyplot as plt
+from fastcore.basics import ifnone
 
 # Cell
-def find_binary_clf_threshold(targets, preds, metrics, *, threshold_range=np.arange(0, 1, 0.05), weight=None, metric_names=None, show=True):
+def find_binary_clf_threshold(targets, preds, metrics, *, threshold_range=None, weight=None, metric_names=None, show=True):
     """Find the best threshold for binary classification given targets and predicted probabilities"""
     if weight is None:
         weight = [1.0] * len(metrics)
+    if threshold_range is None:
+        threshold_range = np.arange(0, 1, 0.05)
     weight = (np.array(weight) / np.sum(weight)).reshape(len(metrics), -1)
     scores = np.array([
         [metric(targets, preds > threshold) for threshold in threshold_range]
@@ -22,6 +24,7 @@ def find_binary_clf_threshold(targets, preds, metrics, *, threshold_range=np.ara
     best_score =  wavg_scores[best_idx]
 
     if show:
+        import matplotlib.pyplot as plt
         if metric_names is None:
             metric_names = [None]*len(metrics)
         metric_names = [
