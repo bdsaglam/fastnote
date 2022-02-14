@@ -7,9 +7,16 @@ import torch
 from torch import nn
 from fastcore.basics import ifnone
 
+# Credit for implementation: https://www.kaggle.com/crissallan/pytorchlightning-efficientnet-focalloss-training
+
 class BinaryFocalLoss(nn.Module):
     """
-    The focal loss for fighting against class-imbalance
+    Binary Focal Loss from imbalanced classification problems
+
+
+    <sup>
+    T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, “Focal loss for dense object detection,” in Proceedings of the IEEE International Conference on Computer Vision (ICCV), Oct 2017.
+    </sup>
     """
     def __init__(self, alpha=1, gamma=2, weight=None, reduction=torch.mean, thresh=0.5):
         super().__init__()

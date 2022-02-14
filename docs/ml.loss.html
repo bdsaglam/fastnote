@@ -37,26 +37,16 @@ nb_path: "nbs/ml/ml.loss.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Focal Loss for Dense Object Detection</p>
-<p><sup>
-T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, “Focal loss for dense object detection,” in Proceedings of the IEEE International Conference on Computer Vision (ICCV), Oct 2017.
-</sup></p>
-$$
-\begin{equation*}
-    p_T = 
+<p>$ 
+p_T = 
     \begin{cases}
         p &amp;\quad \text{if y = 1} \\
         1 - p &amp;\quad \text{otherwise}
     \end{cases}
-\end{equation*}
-$$$$
-\begin{equation}
+$</p>
+<p>$
     \text{FL}(p_t) = -\alpha_t (1 - p_t)^{\gamma}\log{p_t} 
-\end{equation}
-$$<p><sup>
-Credit for implementation:
-https://www.kaggle.com/crissallan/pytorchlightning-efficientnet-focalloss-training
-</sup></p>
+$</p>
 
 </div>
 </div>
@@ -72,9 +62,12 @@ https://www.kaggle.com/crissallan/pytorchlightning-efficientnet-focalloss-traini
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="BinaryFocalLoss" class="doc_header"><code>class</code> <code>BinaryFocalLoss</code><a href="https://github.com/bdsaglam/fastnote/tree/master/fastnote/ml/loss.py#L10" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>BinaryFocalLoss</code>(<strong><code>alpha</code></strong>=<em><code>1</code></em>, <strong><code>gamma</code></strong>=<em><code>2</code></em>, <strong><code>weight</code></strong>=<em><code>None</code></em>, <strong><code>reduction</code></strong>=<em><code>mean</code></em>, <strong><code>thresh</code></strong>=<em><code>0.5</code></em>) :: <code>Module</code></p>
+<h2 id="BinaryFocalLoss" class="doc_header"><code>class</code> <code>BinaryFocalLoss</code><a href="https://github.com/bdsaglam/fastnote/tree/master/fastnote/ml/loss.py#L12" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>BinaryFocalLoss</code>(<strong><code>alpha</code></strong>=<em><code>1</code></em>, <strong><code>gamma</code></strong>=<em><code>2</code></em>, <strong><code>weight</code></strong>=<em><code>None</code></em>, <strong><code>reduction</code></strong>=<em><code>mean</code></em>, <strong><code>thresh</code></strong>=<em><code>0.5</code></em>) :: <code>Module</code></p>
 </blockquote>
-<p>The focal loss for fighting against class-imbalance</p>
+<p>Binary Focal Loss from imbalanced classification problems</p>
+<p><sup>
+T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, “Focal loss for dense object detection,” in Proceedings of the IEEE International Conference on Computer Vision (ICCV), Oct 2017.
+</sup></p>
 
 </div>
 
@@ -164,7 +157,7 @@ https://www.kaggle.com/crissallan/pytorchlightning-efficientnet-focalloss-traini
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fa85001e5b0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7fa8502be160&gt;]</pre>
 </div>
 
 </div>
