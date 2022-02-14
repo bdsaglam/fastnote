@@ -25,6 +25,8 @@
     "evaluation": "/ml.evaluation",
     "": {
       "fastai": {
+        "training": "/fastai.training",
+        "inference": "/fastai.inference",
         "vision": "/fastai.vision"
       }
     }

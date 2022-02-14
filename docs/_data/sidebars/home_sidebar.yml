@@ -76,6 +76,12 @@ entries:
       - output: web
         subfolderitems:
         - output: web,pdf
+          title: training
+          url: /fastai.training
+        - output: web,pdf
+          title: inference
+          url: /fastai.inference
+        - output: web,pdf
           title: vision
           url: /fastai.vision
         title: fastai
