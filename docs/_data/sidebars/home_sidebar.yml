@@ -72,6 +72,9 @@ entries:
     - output: web,pdf
       title: evaluation
       url: /ml.evaluation
+    - output: web,pdf
+      title: loss
+      url: /ml.loss
       subfolders:
       - output: web
         subfolderitems:

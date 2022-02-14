@@ -23,6 +23,7 @@
   },
   "ML": {
     "evaluation": "/ml.evaluation",
+    "loss": "/ml.loss",
     "": {
       "fastai": {
         "training": "/fastai.training",
