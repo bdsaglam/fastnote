@@ -36,6 +36,12 @@ nb_path: "nbs/craft/craft.python.ipynb"
 </pre></div>
 <h3 id="Show-details-of-an-install-Python-package">Show details of an install Python package<a class="anchor-link" href="#Show-details-of-an-install-Python-package"> </a></h3><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">show</span> <span class="n">fastai</span>
 </pre></div>
+<h3 id="Find-which-module-an-object-belongs-to-(imported-from)">Find which module an object belongs to (imported from)<a class="anchor-link" href="#Find-which-module-an-object-belongs-to-(imported-from)"> </a></h3><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">Learner</span><span class="o">.</span><span class="vm">__module__</span>
+</pre></div>
+<h3 id="Find-a-module's-path">Find a module's path<a class="anchor-link" href="#Find-a-module's-path"> </a></h3><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="vm">__file__</span>
+</pre></div>
 
 </div>
 </div>
