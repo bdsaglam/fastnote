@@ -11,9 +11,6 @@ from fastcore.basics import ifnone
 
 class BinaryFocalLoss(nn.Module):
     """
-    Binary Focal Loss from imbalanced classification problems
-
-
     <sup>
     T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, “Focal loss for dense object detection,” in Proceedings of the IEEE International Conference on Computer Vision (ICCV), Oct 2017.
     </sup>

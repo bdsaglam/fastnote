@@ -26,9 +26,9 @@
     "loss": "/ml.loss",
     "": {
       "fastai": {
-        "training": "/fastai.training",
-        "inference": "/fastai.inference",
-        "vision": "/fastai.vision"
+        "training": "/ml.fastai.training",
+        "inference": "/ml.fastai.inference",
+        "vision": "/ml.fastai.vision"
       }
     }
   }

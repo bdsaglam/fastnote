@@ -29,28 +29,6 @@ nb_path: "nbs/ml/ml.loss.ipynb"
 </div>
     {% endraw %}
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Binary-focal-loss">Binary focal loss<a class="anchor-link" href="#Binary-focal-loss"> </a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>$ 
-p_T = 
-    \begin{cases}
-        p &amp;\quad \text{if y = 1} \\
-        1 - p &amp;\quad \text{otherwise}
-    \end{cases}
-$</p>
-<p>$
-    \text{FL}(p_t) = -\alpha_t (1 - p_t)^{\gamma}\log{p_t} 
-$</p>
-
-</div>
-</div>
-</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -64,7 +42,6 @@ $</p>
 <div class="output_markdown rendered_html output_subarea ">
 <h2 id="BinaryFocalLoss" class="doc_header"><code>class</code> <code>BinaryFocalLoss</code><a href="https://github.com/bdsaglam/fastnote/tree/master/fastnote/ml/loss.py#L12" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>BinaryFocalLoss</code>(<strong><code>alpha</code></strong>=<em><code>1</code></em>, <strong><code>gamma</code></strong>=<em><code>2</code></em>, <strong><code>weight</code></strong>=<em><code>None</code></em>, <strong><code>reduction</code></strong>=<em><code>mean</code></em>, <strong><code>thresh</code></strong>=<em><code>0.5</code></em>) :: <code>Module</code></p>
 </blockquote>
-<p>Binary Focal Loss from imbalanced classification problems</p>
 <p><sup>
 T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, “Focal loss for dense object detection,” in Proceedings of the IEEE International Conference on Computer Vision (ICCV), Oct 2017.
 </sup></p>
@@ -86,6 +63,22 @@ T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, “Focal loss for dense 
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$ 
+p_T = 
+    \begin{cases}
+        p &amp;\quad \text{if y = 1} \\
+        1 - p &amp;\quad \text{otherwise}
+    \end{cases}
+$</p>
+<p>$
+    \text{FL}(p_t) = -\alpha_t (1 - p_t)^{\gamma}\log{p_t} 
+$</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
