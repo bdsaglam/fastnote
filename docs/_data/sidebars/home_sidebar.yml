@@ -90,5 +90,11 @@ entries:
         title: fastai
     output: web
     title: ML
+  - folderitems:
+    - output: web,pdf
+      title: Lambda
+      url: /aws.lambda.html
+    output: web
+    title: AWS
   output: web
   title: Sidebar

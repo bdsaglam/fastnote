@@ -31,5 +31,8 @@
         "vision": "/ml.fastai.vision"
       }
     }
+  },
+  "AWS": {
+    "Lambda": "/aws.lambda.html"
   }
 }
