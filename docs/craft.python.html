@@ -53,6 +53,11 @@ nb_path: "nbs/craft/craft.python.ipynb"
     <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
 </pre></div>
+<h2 id="Add-directory-to-Python-PATH-and-import-modules">Add directory to Python PATH and import modules<a class="anchor-link" href="#Add-directory-to-Python-PATH-and-import-modules"> </a></h2><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;/path/to/directory&#39;</span><span class="p">)</span> <span class="c1"># contains utils.py</span>
+
+<span class="kn">import</span> <span class="nn">utils</span>
+</pre></div>
 
 </div>
 </div>
