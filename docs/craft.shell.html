@@ -131,6 +131,15 @@ mv -v <span class="nv">$f</span> <span class="si">${</span><span class="nv">f</s
 <h3 id="Export-environment-variables-from-.env-file">Export environment variables from .env file<a class="anchor-link" href="#Export-environment-variables-from-.env-file"> </a></h3><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="k">$(</span><span class="nb">echo</span> <span class="k">$(</span>cat .env <span class="p">|</span> sed <span class="s1">&#39;s/#.*//g&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/\r//g&#39;</span> <span class="p">|</span> xargs<span class="k">)</span> <span class="p">|</span> envsubst<span class="k">)</span>
 </pre></div>
 <p><a href="https://gist.github.com/mihow/9c7f559807069a03e302605691f85572?permalink_comment_id=3700180#gistcomment-3700180">reference</a></p>
+<h3 id="Split-zip-file-into-parts-and-unzip-parts">Split zip file into parts and unzip parts<a class="anchor-link" href="#Split-zip-file-into-parts-and-unzip-parts"> </a></h3><div class="highlight"><pre><span></span><span class="c1"># split zip file into parts by size</span>
+zip existing.zip --out new.zip -s 100m
+
+<span class="c1"># collect parts before unzip</span>
+zip -F new.zip --out merged.zip
+
+<span class="c1"># unzip</span>
+unzip merge.zip
+</pre></div>
 
 </div>
 </div>
