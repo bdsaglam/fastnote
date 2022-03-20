@@ -1,6 +1,18 @@
 # Engineering log
 
+## 2022-03-17
+
+Design Patterns and Principles That Support Large Scale Systems
+https://medium.com/everything-full-stack/design-patterns-and-principles-that-support-large-scale-systems-f3c9adf89ad
+
+## 2022-03-13
+E2E web app testing
+https://playwright.dev/
+
 ## 2022-03-11
+
+Best practices of advanced serverless developers
+https://www.youtube.com/watch?v=dnFm6MlPnco
 
 Networking best practices for serverless applications (SVS404-R1)
 https://www.youtube.com/watch?v=PF7HaD567rM
