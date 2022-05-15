@@ -1,4 +1,8 @@
 
+## 2022-03-20
+
+F1 Score
+https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f
 ## 2021-11-28
 
 - Post-OCR Paragraph Recognition by Graph Convolutional Networks

@@ -1,8 +1,16 @@
 # Engineering log
 
+Migrations done well
+https://blog.pragmaticengineer.com/typical-migration-approaches/
+
+Software development is a loser's game
+https://thehosk.medium.com/software-development-is-a-losers-game-fc68bb30d7eb
+
+Open source tools
+https://www.youtube.com/watch?v=qXUl3VsbA6o
 ## 2022-03-17
 
-Design Patterns and Principles That Support Large Scale Systems
+Design Patterns and Principles That Support Largiaie Scale Systems
 https://medium.com/everything-full-stack/design-patterns-and-principles-that-support-large-scale-systems-f3c9adf89ad
 
 ## 2022-03-13
