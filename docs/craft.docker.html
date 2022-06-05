@@ -61,7 +61,12 @@ docker tag &lt;image&gt; &lt;username/repository:tag&gt;
     &lt;image&gt; &lt;command&gt;
 </pre></div>
 <ul>
-<li>Delete all images</li>
+<li><p>Create a new image from container changes</p>
+<div class="highlight"><pre><span></span>docker commit &lt;CONTAINER_ID&gt; &lt;IMAGE_NAME:TAG&gt;
+</pre></div>
+</li>
+<li><p>Delete all images</p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span>docker rmi <span class="k">$(</span>docker images -q<span class="k">)</span>
 </pre></div>
@@ -122,18 +127,18 @@ docker <span class="nb">exec</span> -it &lt;container_id&gt; bash
 <h2 id="Docker-for-data-science">Docker for data science<a class="anchor-link" href="#Docker-for-data-science"> </a></h2><p><a href="https://www.youtube.com/watch?v=oO8n3y23b6M&amp;ab_channel=ChicagoPythonUsersGroup">Docker for data science projects</a></p>
 <p>Docker client communicates with docker daemon which is responsible of managing containers and images.
 A Docker container instance is a read-write container layer put on top of read-only image layers.</p>
-<h3 id="Jupyter-notebook-in-Docker-container">Jupyter notebook in Docker container<a class="anchor-link" href="#Jupyter-notebook-in-Docker-container"> </a></h3><div class="highlight"><pre><span></span><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim-buster</span>
+<h3 id="Jupyter-notebook-in-Docker-container">Jupyter notebook in Docker container<a class="anchor-link" href="#Jupyter-notebook-in-Docker-container"> </a></h3><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">python:3.9-slim-buster</span>
 
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<span class="k">COPY</span><span class="w"> </span>. /app
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span> . /app
 
-<span class="k">VOLUME</span><span class="w"> </span><span class="s">/shared_dir</span>
+<span class="k">VOLUME</span><span class="s"> /shared_dir</span>
 
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8888</span>
+<span class="k">EXPOSE</span><span class="s"> 8888</span>
 
-<span class="k">RUN</span><span class="w"> </span>pip install --no-cache-dir jupyter 
+<span class="k">RUN</span> pip install --no-cache-dir jupyter 
 
-<span class="k">CMD</span><span class="w"> </span>jupyter notebook --ip<span class="o">=</span><span class="s1">&#39;*&#39;</span> --port<span class="o">=</span><span class="m">8888</span> --no-browser --allow-root
+<span class="k">CMD</span> jupyter notebook --ip<span class="o">=</span><span class="s1">&#39;*&#39;</span> --port<span class="o">=</span><span class="m">8888</span> --no-browser --allow-root
 </pre></div>
 <p>Then, build image and start container:</p>
 <div class="highlight"><pre><span></span>docker build -t data-science-image

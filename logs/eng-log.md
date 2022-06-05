@@ -1,5 +1,14 @@
 # Engineering log
 
+## 2022-06-05
+
+Advanced TypeScript
+https://www.youtube.com/playlist?list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b
+
+Dynamic function arguments with GENERICS - Advanced TypeScript
+https://www.youtube.com/watch?v=YE_3WwX-Dl8&list=PLIvujZeVDLMx040-j1W4WFs1BxuTGdI_b&index=5&ab_channel=MattPocock
+
+## 2022-05-01
 Migrations done well
 https://blog.pragmaticengineer.com/typical-migration-approaches/
 
