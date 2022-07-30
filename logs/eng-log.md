@@ -1,5 +1,9 @@
 # Engineering log
 
+## 2022-07-30
+Monorepos
+https://www.youtube.com/watch?v=9iU_IE6vnJ8&ab_channel=Fireship
+
 ## 2022-06-05
 
 Advanced TypeScript
