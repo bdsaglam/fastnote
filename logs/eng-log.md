@@ -1,8 +1,16 @@
 # Engineering log
 
+## 2022-08-01
+HTTPX Tutorial - A next-generation HTTP client for Python
+https://www.youtube.com/watch?v=qAh5dDODJ5k&ab_channel=Fireship
+
 ## 2022-07-30
 Monorepos
 https://www.youtube.com/watch?v=9iU_IE6vnJ8&ab_channel=Fireship
+
+## 2022-06-05
+Integration Testing With Pytest
+https://scanairobi.hashnode.dev/integration-testing-with-pytest
 
 ## 2022-06-05
 
